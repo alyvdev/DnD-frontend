@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realm of Adventures - D&D</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-900 text-green-200">
+    <header
+      class="bg-gray-900 text-green-200 p-4 flex justify-between items-center relative"
+    >
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-dragon text-2xl"></i>
+        <span class="font-cinzel text-2xl">Dungeons & Dragons</span>
+      </div>
+      <ul class="flex space-x-12 absolute left-1/2 transform -translate-x-1/2">
+        <li>
+          <a
+            href="#"
+            data-page="home"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            data-page="story"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-book-open"></i>
+            <span>Story</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            data-page="map"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Map</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            data-page="characters"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-users"></i>
+            <span>Characters</span>
+          </a>
+        </li>
+      </ul>
+      <a
+        href="Login/login.html"
+        class="flex items-center space-x-1 text-green-100 hover:text-green-400 border border-green-400 px-3 py-1 rounded"
+      >
+        <i class="fas fa-sign-in-alt"></i>
+        <span>Login</span>
+      </a>
+    </header>
+
+    <main>
+      <section
+        class="relative bg-cover bg-center h-screen"
+        style="background-image: url('./Images/bg.png')"
+      >
+        <div
+          class="absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center text-center"
+        >
+          <h1
+            class="text-5xl font-medieval text-green-100 mb-4"
+            style="font-family: 'MedievalSharp', cursive"
+          >
+            Enter a World of Wonders
+          </h1>
+          <p class="text-lg text-green-300 mb-6 max-w-2xl">
+            Discover Tales, Meet Legendary Heroes, Navigate Realms, and Let Our
+            Chatbot Be Your Guide on Every Adventure!
+          </p>
+          <button
+            class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition duration-300 text-lg"
+          >
+            Begin Your Adventure
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-green-200 p-6 mt-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-dragon text-xl"></i>
+              <span class="font-cinzel text-xl">Dungeons & Dragons</span>
+            </div>
+            <p class="text-sm text-green-400 mt-2">
+              Embark on legendary adventures
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-discord text-xl"></i
+            ></a>
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-twitter text-xl"></i
+            ></a>
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-youtube text-xl"></i
+            ></a>
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-twitch text-xl"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="mt-6 pt-6 border-t border-gray-700 text-center text-sm text-green-400"
+        >
+          &copy; 2023 Realm of Adventures. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="./Javascript/script.js"></script>
+  </body>
+</html>

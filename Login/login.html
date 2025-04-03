@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realm of Adventures - Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-900 text-green-200">
+    <header
+      class="bg-gray-900 text-green-200 p-4 flex justify-between items-center relative"
+    >
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-dragon text-2xl"></i>
+        <span class="font-cinzel text-2xl">Dungeons & Dragons</span>
+      </div>
+      <ul class="flex space-x-12 absolute left-1/2 transform -translate-x-1/2">
+        <li>
+          <a
+            href="../index.html"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="../Story/story.html"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-book-open"></i>
+            <span>Story</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="../Map/map.html"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Map</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="../Characters/characters.html"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-users"></i>
+            <span>Characters</span>
+          </a>
+        </li>
+      </ul>
+      <a
+        href="#"
+        class="flex items-center space-x-1 text-green-400 border border-green-400 px-3 py-1 rounded"
+      >
+        <i class="fas fa-sign-in-alt"></i>
+        <span>Login</span>
+      </a>
+    </header>
+
+    <main class="flex items-center justify-center min-h-screen">
+      <div
+        class="login-container bg-gray-800 p-8 rounded-lg border border-green-700 w-full max-w-md"
+      >
+        <div class="text-center mb-8">
+          <i class="fas fa-dragon text-4xl text-green-400 mb-4"></i>
+          <h1 class="text-3xl font-medieval text-green-100">
+            Adventurer's Portal
+          </h1>
+          <p class="text-green-300 mt-2">Sign in to continue your journey</p>
+        </div>
+
+        <form>
+          <div class="mb-6">
+            <label for="username" class="block text-green-300 mb-2"
+              >Username</label
+            >
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-3 text-green-500"
+              >
+                <i class="fas fa-user"></i>
+              </span>
+              <input
+                type="text"
+                id="username"
+                class="w-full bg-gray-700 text-green-100 border border-green-600 rounded py-2 px-4 pl-10 focus:outline-none focus:border-green-400"
+                placeholder="Enter your username"
+              />
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="password" class="block text-green-300 mb-2"
+              >Password</label
+            >
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-3 text-green-500"
+              >
+                <i class="fas fa-lock"></i>
+              </span>
+              <input
+                type="password"
+                id="password"
+                class="w-full bg-gray-700 text-green-100 border border-green-600 rounded py-2 px-4 pl-10 focus:outline-none focus:border-green-400"
+                placeholder="Enter your password"
+              />
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <input
+                type="checkbox"
+                id="remember"
+                class="mr-2 bg-gray-700 border-green-600 text-green-500 focus:ring-green-500"
+              />
+              <label for="remember" class="text-green-200 text-sm"
+                >Remember me</label
+              >
+            </div>
+            <a href="#" class="text-green-400 text-sm hover:text-green-300"
+              >Forgot password?</a
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-300"
+          >
+            Sign In
+          </button>
+
+          <div class="mt-6 text-center">
+            <p class="text-green-200">
+              Don't have an account?
+              <a href="#" class="text-green-400 hover:text-green-300"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-gray-700">
+          <p class="text-center text-green-300 mb-4">Or continue with</p>
+          <div class="flex justify-center space-x-4">
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-green-100 hover:bg-green-700 hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fab fa-google"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-green-100 hover:bg-green-700 hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-green-100 hover:bg-green-700 hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-green-100 hover:bg-green-700 hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-green-200 p-6">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-dragon text-xl"></i>
+              <span class="font-cinzel text-xl">Dungeons & Dragons</span>
+            </div>
+            <p class="text-sm text-green-400 mt-2">
+              Embark on legendary adventures
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-discord text-xl"></i
+            ></a>
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-twitter text-xl"></i
+            ></a>
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-youtube text-xl"></i
+            ></a>
+            <a href="#" class="text-green-300 hover:text-green-100"
+              ><i class="fab fa-twitch text-xl"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="mt-6 pt-6 border-t border-gray-700 text-center text-sm text-green-400"
+        >
+          &copy; 2023 Realm of Adventures. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="../Javascript/script.js"></script>
+  </body>
+</html>

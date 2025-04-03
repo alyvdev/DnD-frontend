@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderer's Fate - Adventure Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-900 text-green-200">
+    <header
+      class="bg-gray-900 text-green-200 p-4 flex justify-between items-center relative"
+    >
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-dragon text-2xl"></i>
+        <span class="font-cinzel text-2xl">Wanderer's Fate</span>
+      </div>
+      <ul class="flex space-x-12 absolute left-1/2 transform -translate-x-1/2">
+        <li>
+          <a
+            href="index.html"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <button
+            id="save-game-btn"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-save"></i>
+            <span>Save</span>
+          </button>
+        </li>
+        <li>
+          <button
+            id="new-game-btn"
+            class="flex items-center space-x-1 text-green-100 hover:text-green-400"
+          >
+            <i class="fas fa-plus"></i>
+            <span>New Game</span>
+          </button>
+        </li>
+      </ul>
+      <a
+        href="index.html"
+        class="flex items-center space-x-1 text-green-100 hover:text-green-400 border border-green-400 px-3 py-1 rounded"
+      >
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Exit</span>
+      </a>
+    </header>
+
+    <main class="game-container p-4 grid grid-cols-12 gap-4 h-screen">
+      <!-- Character Panel -->
+      <div
+        class="character-panel col-span-3 bg-gray-800 rounded-lg p-4 border border-green-700 flex flex-col"
+      >
+        <div class="character-info mb-6">
+          <h2
+            class="text-xl font-medieval text-green-300 mb-2 border-b border-green-700 pb-2"
+          >
+            Character Information
+          </h2>
+          <div class="character-name mb-2">
+            <span class="text-gray-400">Name:</span>
+            <span id="player-name" class="text-green-200 ml-2">Wanderer</span>
+          </div>
+          <div class="character-stats grid grid-cols-2 gap-2">
+            <div class="stat-item">
+              <i class="fas fa-heart text-red-500 mr-2"></i>
+              <span class="text-gray-400">Health:</span>
+              <span id="player-health" class="text-green-200 ml-1">100</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-bolt text-yellow-500 mr-2"></i>
+              <span class="text-gray-400">Stamina:</span>
+              <span id="player-stamina" class="text-green-200 ml-1">100</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-coins text-yellow-400 mr-2"></i>
+              <span class="text-gray-400">Gold:</span>
+              <span id="player-gold" class="text-green-200 ml-1">50</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="inventory flex-grow overflow-auto">
+          <h2
+            class="text-xl font-medieval text-green-300 mb-2 border-b border-green-700 pb-2"
+          >
+            Inventory
+          </h2>
+          <div id="inventory-items" class="mt-2">
+            <p class="text-gray-400">Your inventory is empty.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Map -->
+      <div
+        class="map-panel col-span-5 bg-gray-800 rounded-lg border border-green-700 flex flex-col"
+      >
+        <div class="location-info p-4 border-b border-green-700">
+          <h2 id="location-name" class="text-xl font-medieval text-green-300">
+            Starting Point
+          </h2>
+          <p id="location-description" class="text-sm text-gray-400">
+            A clearing in the dark forest.
+          </p>
+        </div>
+        <div id="game-map" class="flex-grow relative overflow-hidden">
+          <!-- Map will be rendered here -->
+        </div>
+      </div>
+
+      <!-- Story Panel -->
+      <div
+        class="story-panel col-span-4 bg-gray-800 rounded-lg p-4 border border-green-700 flex flex-col"
+      >
+        <h2
+          class="text-xl font-medieval text-green-300 mb-2 border-b border-green-700 pb-2"
+        >
+          Story
+        </h2>
+        <div class="story-content flex-grow overflow-auto mb-4">
+          <p id="story-text" class="mb-4 text-green-100">
+            You open your eyes in a dark forest. Mist surrounds you, and you
+            can't remember where you came from. Distant lights catch your
+            attention.
+          </p>
+        </div>
+        <div id="story-choices" class="story-choices">
+          <button
+            class="choice-btn w-full text-left p-3 mb-2 bg-gray-800 border border-green-700 rounded hover:bg-gray-700"
+          >
+            Move toward the lights
+          </button>
+          <button
+            class="choice-btn w-full text-left p-3 mb-2 bg-gray-800 border border-green-700 rounded hover:bg-gray-700"
+          >
+            Explore the surroundings
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./Javascript/game.js"></script>
+  </body>
+</html>
