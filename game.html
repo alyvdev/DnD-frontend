@@ -75,33 +75,240 @@
             <span class="text-gray-400">Name:</span>
             <span id="player-name" class="text-green-200 ml-2">Wanderer</span>
           </div>
-          <div class="character-stats grid grid-cols-2 gap-2">
+          <div class="character-stats grid grid-cols-2 gap-2 mb-4">
             <div class="stat-item">
               <i class="fas fa-heart text-red-500 mr-2"></i>
               <span class="text-gray-400">Health:</span>
               <span id="player-health" class="text-green-200 ml-1">100</span>
+              <span class="text-gray-500">/</span>
+              <span id="player-max-health" class="text-gray-400">100</span>
             </div>
             <div class="stat-item">
               <i class="fas fa-bolt text-yellow-500 mr-2"></i>
               <span class="text-gray-400">Stamina:</span>
               <span id="player-stamina" class="text-green-200 ml-1">100</span>
+              <span class="text-gray-500">/</span>
+              <span id="player-max-stamina" class="text-gray-400">100</span>
             </div>
             <div class="stat-item">
               <i class="fas fa-coins text-yellow-400 mr-2"></i>
               <span class="text-gray-400">Gold:</span>
               <span id="player-gold" class="text-green-200 ml-1">50</span>
             </div>
+            <div class="stat-item">
+              <i class="fas fa-star text-blue-400 mr-2"></i>
+              <span class="text-gray-400">Level:</span>
+              <span id="player-level" class="text-green-200 ml-1">1</span>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-md font-medieval text-green-300 mb-2 border-b border-green-700 pb-1"
+            >
+              Attributes
+            </h3>
+            <div class="grid grid-cols-3 gap-2">
+              <div
+                class="stat-item text-center bg-gray-700 bg-opacity-30 rounded p-1"
+              >
+                <div class="text-xs text-green-400">STR</div>
+                <div id="player-strength" class="text-lg text-green-200">
+                  10
+                </div>
+              </div>
+              <div
+                class="stat-item text-center bg-gray-700 bg-opacity-30 rounded p-1"
+              >
+                <div class="text-xs text-green-400">DEX</div>
+                <div id="player-dexterity" class="text-lg text-green-200">
+                  10
+                </div>
+              </div>
+              <div
+                class="stat-item text-center bg-gray-700 bg-opacity-30 rounded p-1"
+              >
+                <div class="text-xs text-green-400">CON</div>
+                <div id="player-constitution" class="text-lg text-green-200">
+                  10
+                </div>
+              </div>
+              <div
+                class="stat-item text-center bg-gray-700 bg-opacity-30 rounded p-1"
+              >
+                <div class="text-xs text-green-400">INT</div>
+                <div id="player-intelligence" class="text-lg text-green-200">
+                  10
+                </div>
+              </div>
+              <div
+                class="stat-item text-center bg-gray-700 bg-opacity-30 rounded p-1"
+              >
+                <div class="text-xs text-green-400">WIS</div>
+                <div id="player-wisdom" class="text-lg text-green-200">10</div>
+              </div>
+              <div
+                class="stat-item text-center bg-gray-700 bg-opacity-30 rounded p-1"
+              >
+                <div class="text-xs text-green-400">CHA</div>
+                <div id="player-charisma" class="text-lg text-green-200">
+                  10
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-md font-medieval text-green-300 mb-2 border-b border-green-700 pb-1"
+            >
+              Skills
+            </h3>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="stat-item">
+                <span class="text-gray-400">Combat:</span>
+                <span id="player-combat" class="text-green-200 ml-1">1</span>
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Survival:</span>
+                <span id="player-survival" class="text-green-200 ml-1">1</span>
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Persuasion:</span>
+                <span id="player-persuasion" class="text-green-200 ml-1"
+                  >1</span
+                >
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Stealth:</span>
+                <span id="player-stealth" class="text-green-200 ml-1">1</span>
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Arcana:</span>
+                <span id="player-arcana" class="text-green-200 ml-1">1</span>
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Perception:</span>
+                <span id="player-perception" class="text-green-200 ml-1"
+                  >1</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-md font-medieval text-green-300 mb-2 border-b border-green-700 pb-1"
+            >
+              Equipment
+            </h3>
+            <div class="grid grid-cols-1 gap-2">
+              <div class="stat-item">
+                <span class="text-gray-400">Weapon:</span>
+                <span id="player-weapon" class="text-green-200 ml-1">None</span>
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Armor:</span>
+                <span id="player-armor" class="text-green-200 ml-1">None</span>
+              </div>
+              <div class="stat-item">
+                <span class="text-gray-400">Accessory:</span>
+                <span id="player-accessory" class="text-green-200 ml-1"
+                  >None</span
+                >
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="inventory flex-grow overflow-auto">
-          <h2
-            class="text-xl font-medieval text-green-300 mb-2 border-b border-green-700 pb-2"
-          >
-            Inventory
-          </h2>
-          <div id="inventory-items" class="mt-2">
-            <p class="text-gray-400">Your inventory is empty.</p>
+        <div class="flex-grow flex flex-col">
+          <!-- Tab Navigation -->
+          <div class="flex border-b border-green-700">
+            <button
+              id="inventory-tab"
+              class="tab-btn px-4 py-2 text-green-300 border-b-2 border-green-500"
+            >
+              <i class="fas fa-backpack mr-1"></i> Inventory
+            </button>
+            <button
+              id="quests-tab"
+              class="tab-btn px-4 py-2 text-gray-400 hover:text-green-300"
+            >
+              <i class="fas fa-scroll mr-1"></i> Quests
+            </button>
+            <button
+              id="skills-tab"
+              class="tab-btn px-4 py-2 text-gray-400 hover:text-green-300"
+            >
+              <i class="fas fa-book mr-1"></i> Skills
+            </button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="flex-grow overflow-auto">
+            <!-- Inventory Tab -->
+            <div id="inventory-content" class="tab-content block">
+              <h2 class="text-xl font-medieval text-green-300 my-2">
+                Inventory
+              </h2>
+              <div id="inventory-items" class="mt-2">
+                <p class="text-gray-400">Your inventory is empty.</p>
+              </div>
+            </div>
+
+            <!-- Quests Tab -->
+            <div id="quests-content" class="tab-content hidden">
+              <h2 class="text-xl font-medieval text-green-300 my-2">
+                Quest Log
+              </h2>
+              <div id="quest-items" class="mt-2">
+                <p class="text-gray-400">You have no active quests.</p>
+              </div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div id="skills-content" class="tab-content hidden">
+              <h2 class="text-xl font-medieval text-green-300 my-2">
+                Skills & Abilities
+              </h2>
+              <div class="mt-2">
+                <div class="mb-4">
+                  <h3 class="text-md text-green-400 mb-1">Combat Skills</h3>
+                  <div class="bg-gray-700 bg-opacity-30 p-2 rounded">
+                    <div class="flex justify-between items-center mb-1">
+                      <span>Basic Attack</span>
+                      <span class="text-xs bg-gray-600 px-2 py-1 rounded"
+                        >Always Available</span
+                      >
+                    </div>
+                    <p class="text-sm text-gray-400">
+                      A standard attack with your equipped weapon.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="learned-skills">
+                  <p class="text-gray-400">
+                    You haven't learned any special skills yet.
+                  </p>
+                </div>
+
+                <div class="mt-4">
+                  <h3 class="text-md text-green-400 mb-1">Experience</h3>
+                  <div class="relative h-4 bg-gray-700 rounded overflow-hidden">
+                    <div
+                      id="xp-bar"
+                      class="absolute h-full bg-blue-500"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <div class="flex justify-between text-xs mt-1">
+                    <span id="current-xp">0 XP</span>
+                    <span id="next-level-xp">100 XP needed for next level</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -119,7 +326,78 @@
           </p>
         </div>
         <div id="game-map" class="flex-grow relative overflow-hidden">
-          <!-- Map will be rendered here -->
+          <!-- Map View -->
+          <div id="map-view" class="absolute inset-0">
+            <!-- Map will be rendered here -->
+            <div class="absolute bottom-4 right-4">
+              <button
+                id="encounter-btn"
+                class="bg-red-700 hover:bg-red-600 text-white py-2 px-4 rounded"
+              >
+                <i class="fas fa-skull mr-1"></i> Random Encounter
+              </button>
+            </div>
+          </div>
+
+          <!-- Combat View (hidden by default) -->
+          <div id="combat-view" class="absolute inset-0 hidden">
+            <div class="h-full flex flex-col">
+              <!-- Enemy Area -->
+              <div
+                class="enemy-area flex-grow flex items-center justify-center p-4"
+              >
+                <div id="enemy-container" class="text-center">
+                  <!-- Enemy will be displayed here -->
+                </div>
+              </div>
+
+              <!-- Combat Controls -->
+              <div
+                class="combat-controls bg-gray-900 p-4 border-t border-green-700"
+              >
+                <div class="mb-3 flex justify-between items-center">
+                  <div class="text-green-300 font-medieval">Combat</div>
+                  <div id="combat-status" class="text-sm text-yellow-400">
+                    Your turn
+                  </div>
+                </div>
+
+                <div
+                  id="combat-log"
+                  class="bg-gray-800 p-2 rounded mb-3 h-20 overflow-y-auto text-sm text-gray-300"
+                >
+                  <p>Combat has begun!</p>
+                </div>
+
+                <div id="combat-actions" class="grid grid-cols-2 gap-2">
+                  <button
+                    id="attack-btn"
+                    class="bg-red-700 hover:bg-red-600 text-white py-2 px-4 rounded"
+                  >
+                    <i class="fas fa-sword mr-1"></i> Attack
+                  </button>
+                  <button
+                    id="defend-btn"
+                    class="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 rounded"
+                  >
+                    <i class="fas fa-shield mr-1"></i> Defend
+                  </button>
+                  <button
+                    id="use-item-btn"
+                    class="bg-green-700 hover:bg-green-600 text-white py-2 px-4 rounded"
+                  >
+                    <i class="fas fa-flask mr-1"></i> Use Item
+                  </button>
+                  <button
+                    id="flee-btn"
+                    class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded"
+                  >
+                    <i class="fas fa-running mr-1"></i> Flee
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
